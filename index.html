@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<code>
+       <pre>
+           <h1>View Results in Developer Console now!</h1>
+        // Method-1 concat() Example-1
+        (function () {
+            var a = 'hello ';
+            var b = 'world';
+            var c = a.concat(b)
+            console.log(c); // hello world
+
+        })();
+
+
+        // concat() Example-2
+        (function () {
+            var a = '5';
+            var b = '5 typeOf String';
+            console.log(a.concat(b)); // 55 typeOf String
+        })();
+
+
+        // concat() Example-3
+        (function () {
+            var a = 'hello ';
+            var b = 'world ';
+            var c = 'Have a nice day!';
+            console.log(a.concat(b, c)); // hello world Have a nice day!
+        })();
+
+
+        // concat() Example-4
+        (function () {
+            var names1 = ['Jacqueline', 'Morgan', 'Elizabeth', 'Katherine'];
+            var names2 = ['Victoria', 'Lauraine', 'Susan', 'Catherine'];
+            console.log(names1.concat(names2)) // ['Jacqueline', 'Morgan', 'Elizabeth', 'Katherine', 'Victoria', 'Lauraine', 'Susan', 'Catherine']
+            console.log(names1.concat('Mark Zuckerberg')) //'Jacqueline', 'Morgan', 'Elizabeth', 'Katherine', 'Mark Zuckerberg']
+        })();
+
+        // Method-2 every() Example-1
+        (function () {
+            var fn = (a) => a < 50;
+            var a = [1, 2, 5, 15, 25, 35, 45];
+            console.log(a.every(fn)) // true
+        })();
+
+
+        // every() Example-2
+        (function () {
+            var fn = (a) => a < 50;
+            var a = [1, 2, 5, 15, 25, 35, 45, 50];
+            console.log(a.every(fn)) // false
+        })();
+
+
+        // every() Example-3
+        (function () {
+            var fn = (a) => a <= 50;
+            var a = [1, 2, 5, '15', 25, 35, 45, '50'];
+            console.log(a.every(fn)) // true
+        })();
+
+
+        // every() Example-4
+        (function () {
+            var fn = (a) => a < 50;
+            var a = [1, 2, 5, 'hello', 25, 35, 'world'];
+            console.log(a.every(fn)) // false
+        })();
+
+
+        // every() Example-5
+        (function () {
+            var fn = (a) => a < 50;
+            var a = [1, 2, 5, true, 25, 35, 45, false];
+            console.log(a.every(fn)) // true
+        })();
+
+
+        // every() Example-6
+        (function () {
+            var fn = (a) => a > 50;
+            var a = [55, 60, 75, 80, 95, 100];
+            console.log(a.every(fn)) // true
+        })();
+
+
+        // every() Example-7
+        (function () {
+            var fn = (a) => a > 50;
+            var a = [55, 60, 75, 50, 80, 95, 100];
+            console.log(a.every(fn)) // false
+        })();
+
+
+        <h1>View Results in Developer Console now!</h1>
+        // Method-3 filter() Example-1
+        (function () {
+            var fn = (a) => a >= 30;
+            var a = [3, 5, 9, 12, 16, 20, 30, 34, 38, 47, 50];
+            var newArray = a.filter(fn)
+            console.log(newArray) // [30, 34, 38, 47, 50]
+        })();
+
+
+        // filter() Example-2
+        (function () {
+            var fn = (a) => a >= 30;
+            var a = [3, 5, 9, 12, 16, 20, 30, 34, 34, 38, 47, 47, 50];
+            var newArray = a.filter(fn)
+            console.log(newArray) // [30, 34, 34, 38, 47, 47, 50]
+        })();
+
+        // filter() Example-3
+        (function () {
+            var fn = (a) => a >= 30;
+            var a = [3, 5, 9, 12, 16, 20, 30, "34", 38, 47, "50"];
+            var newArray = a.filter(fn)
+            console.log(newArray) // [30, "34", 38, 47, "50"]
+        })();
+
+
+        // filter() Example-4
+        (function () {
+            var fn = (a) => a > 30;
+            var a = [3, 5, 9, 12, 16, 20, 30, true, 38, 47, "hello"];
+            var newArray = a.filter(fn)
+            console.log(newArray) // [38, 47]
+        })();
+
+        // Method-4 forEach() Example-1
+        (function () {
+            var a = [3, 5, 9, 12, 16, 20, 30, 34, 38, 47, 50];
+            a.forEach(function (val, index, array) {
+                console.log('value ' + val, 'index ' + index, 'array ' + array); // value 3 index 0 array 3,5,9,12,16,20,30,34,38,47,50
+            })
+        })();
+
+
+        // Method-5 indexOf() Example-1
+        (function () {
+            var a = [3, 5, 9, 12, 16, 20, 30, 34, 38, 47, 50];
+            console.log('index ' + a.indexOf(34)); // index 7
+        })();
+
+
+        // indexOf() Example-2
+        (function () {
+            var a = [3, 5, 9, 12, 16, 20, 30, "34", 38, 47, 50];
+            console.log(a.indexOf(34) + ' Not Found'); // -1 Not Found
+        })();
+
+
+        // indexOf() Example-3
+        (function () {
+            var a = [3, 5, 9, 12, 16, 20, 30, 34, 38, 47, 50];
+            console.log(a.indexOf(25) + ' Not Found'); // -1 Not Found
+        })();
+
+
+        // Method-6 lastIndexOf() Example-1
+        (function () {
+            var anyString = 'Brave new world';
+            console.log('The index of the first w from the beginning is ' + anyString.indexOf('w')); // logs 8
+            console.log('The index of the first w from the end is ' + anyString.lastIndexOf('w')); // logs 10
+            console.log('The index of "new" from the beginning is ' + anyString.indexOf('new')); // logs 6
+            console.log('The index of "new" from the end is ' + anyString.lastIndexOf('new')); // logs 6
+        })();
+
+
+        // Method-7 join() Example-1
+        (function () {
+            var names = ['Jacqueline', 'Morgan', 'Elizabeth', 'Katherine'];
+            console.log(names) // "Jacqueline", "Morgan", "Elizabeth", "Katherine"]
+            console.log(names.join()) // Jacqueline,Morgan,Elizabeth,Katherine
+            console.log(names.join('-')) // Jacqueline-Morgan-Elizabeth-Katherine
+            console.log(names.join(' ')) // Jacqueline Morgan Elizabeth Katherine
+            console.log(names.join('')) // JacquelineMorganElizabethKatherine
+        })();
+
+
+        // Method-8 map() Example-1
+        (function () {
+            var arr = [1, 2, 3, 4, 5];
+            console.log(arr.map(a => a * 2)); // [2, 4, 6, 8, 10]
+        })();
+
+
+        // map() Example-2
+        (function () {
+            var arr = [1, 2, 3, 4, 5];
+            console.log(arr.map(a => Math.sqrt(a))); // [1, 1.4142135623730951, 1.7320508075688772, 2, 2.23606797749979]
+        })();
+
+
+        // map() Example-3
+        (function () {
+            var arr = [1, 2, 3, 4, 5];
+            arr.map(function (a) {
+                console.log(Math.sqrt(a)); // same result like Example-2 but without array
+            })
+        })();
+
+
+        // Method-9 pop() Example-1
+        (function () {
+            var a = [1, 2, 3, 4, 5, 6];
+
+            var b = a.pop();
+            console.log(a); // [1, 2, 3, 4, 5]
+            console.log(b); // 6
+
+            a.pop();
+            console.log(a); // [1, 2, 3, 4]
+        })();
+
+
+        <h1>View Results in Developer Console now!</h1>
+        // Method-10 push() Example-1
+        (function () {
+            var animals = ['pigs', 'goats', 'sheep'];
+
+            console.log(animals.push('cows')); // 4
+            console.log(animals); // ['pigs', 'goats', 'sheep', 'cows']
+
+            animals.push('chickens');
+            console.log(animals); // ['pigs', 'goats', 'sheep', 'cows', 'chickens']
+        })();
+
+
+        // Method-11 reduce() Example-1
+        (function () {
+            var a = [1, 2, 3, 4];
+            var fn = (accumulator, currentValue) => accumulator + currentValue;
+            console.log(a.reduce(fn)); // 10
+            console.log(a.reduce(fn, 5)); // 15
+        })();
+
+
+        // Method-12 reduceRight() Example-1 (from right-to-left)
+        (function () {
+            var a = [[0, 1], [2, 3], [4, 5]].reduceRight(
+                (accumulator, currentValue) => accumulator.concat(currentValue)
+            );
+            console.log(a); // [4, 5, 2, 3, 0, 1]
+        })();
+
+
+        // Method-13 reverse() Example-1 (from right-to-left)
+        (function () {
+            var a = ['one', 'two', 'three'];
+            console.log('array1: ', a); // array1: ['one', 'two', 'three']
+
+            var reversed = a.reverse();
+            console.log('reversed: ', reversed); // reversed: ['three', 'two', 'one']
+
+            console.log('array1: ', a); // array1: ['three', 'two', 'one']
+        })();
+
+
+        // Method-14 shift() Example-1
+        (function () {
+            var a = [1, 2, 3];
+            var firstElement = a.shift();
+
+            console.log(a); // [2, 3]
+
+            console.log(firstElement); // 1
+        })();
+
+
+        // Method-15 slice() Example-1
+        (function () {
+            var animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+            console.log(animals.slice(2)); // ["camel", "duck", "elephant"]
+
+            console.log(animals.slice(2, 4)); // ["camel", "duck"]
+
+            console.log(animals.slice(1, 5)); // ["bison", "camel", "duck", "elephant"]
+
+            console.log(animals) // ['ant', 'bison', 'camel', 'duck', 'elephant']
+        })();
+
+
+        // Method-16 some() Example-1
+        (function () {
+            var fn = (a) => a % 2 === 0;
+            var fn1 = (a) => a % 6 === 0;
+
+            var a = [1, 2, 3, 4, 5];
+            console.log(a.some(fn)) // true
+            console.log(a.some(fn1)) // false
+        })();
+
+
+        // some() Example-2
+        (function () {
+            var fn = (a) => a >= 10;
+
+            var a = [1, 2, 3, 4, 5];
+            console.log(a.some(fn)) // false
+
+            var b = [11, 2, 3, 4, 5];
+            console.log(b.some(fn)) // true
+        })();
+
+
+        <h1>View Results in Developer Console now!</h1>
+        // Method-17 toSource() Example-1
+        //  console.log(newBook.toSource()); // toSource() method given error in a Google Chrome
+        (function () {
+            function book(title, publisher, price) {
+                this.title = title;
+                this.publisher = publisher;
+                this.price = price;
+            }
+            var newBook = new book("Perl", "Leo Inc", 200);
+            //  console.log(newBook.toSource()); // toSource() method given error in a Google Chrome
+        })();
+
+
+        // Method-18 sort() Example-1
+        (function () {
+            var months = ['March', 'Jan', 'Feb', 'Dec'];
+            months.sort();
+            console.log(months) // ["Dec", "Feb", "Jan", "March"]
+        })();
+
+
+        // sort() Example-2
+        (function () {
+            var a = [1, 30, 4, 21, 100000];
+            a.sort();
+            console.log(a) // [1, 100000, 21, 30, 4]
+        })();
+
+
+        // Method-19 splice() Example-1 adding
+        (function () {
+            var months = ['Jan', 'March', 'April', 'June'];
+            months.splice(1, 0, 'Feb');
+            console.log(months);  // ['Jan', 'Feb', 'March', 'April', 'June']
+        })();
+
+
+        // splice() Example-2 removing
+        (function () {
+            var months = ['Jan', 'March', 'April', 'June'];
+            months.splice(2, 1);
+            console.log(months); // ['Jan', 'Feb', 'March', 'June']
+        })();
+
+
+        // splice() Example-3 replace
+        (function () {
+            var months = ['Jan', 'March', 'April', 'June'];
+            months.splice(1, 4, 'Feb', 'March', 'April', 'May', 'june');
+            console.log(months); // ["Jan", "Feb", "March", "April", "May", "june"]
+        })();
+
+
+        // Method-20 toString() Example-1
+        (function () {
+            var fruits = ["orange", "mango", "banana", "sugar"];
+            var str = fruits.toString();
+            console.log(str) // [orange, mango, banana, sugar];
+        })();
+
+
+        // Method-21 unshift() Example-1
+        (function () {
+            var a = [1, 2, 3];
+
+            console.log('new-length ' + a.unshift(4, 5)); // new-length 5
+            console.log(a); // [4, 5, 1, 2, 3]
+        })();
+       </pre>
+   </code>
+
+<body>
+    <script>
+        // Method-1 concat() Example-1
+        (function () {
+            console.log('// Method-1 concat() Example-1');
+            var a = 'hello ';
+            var b = 'world';
+            var c = a.concat(b)
+            console.log(c); // hello world
+
+        })();
+
+
+        // concat() Example-2
+        (function () {
+            console.log('// concat() Example-2');
+            var a = '5';
+            var b = '5 typeOf String';
+            console.log(a.concat(b)); // 55 typeOf String
+        })();
+
+
+        // concat() Example-3
+        (function () {
+            console.log('// concat() Example-3');
+            var a = 'hello ';
+            var b = 'world ';
+            var c = 'Have a nice day!';
+            console.log(a.concat(b, c)); // hello world Have a nice day!
+        })();
+
+
+        // concat() Example-4
+        (function () {
+            console.log('// concat() Example-4');
+            var names1 = ['Jacqueline', 'Morgan', 'Elizabeth', 'Katherine'];
+            var names2 = ['Victoria', 'Lauraine', 'Susan', 'Catherine'];
+            console.log(names1.concat(names2)) // ['Jacqueline', 'Morgan', 'Elizabeth', 'Katherine', 'Victoria', 'Lauraine', 'Susan', 'Catherine']
+            console.log(names1.concat('Mark Zuckerberg')) //'Jacqueline', 'Morgan', 'Elizabeth', 'Katherine', 'Mark Zuckerberg']
+        })();
+
+        // Method-2 every() Example-1
+        (function () {
+            console.log('// Method-2 every() Example-1');
+            var fn = (a) => a < 50;
+            var a = [1, 2, 5, 15, 25, 35, 45];
+            console.log(a.every(fn)) // true
+        })();
+
+
+        // every() Example-2
+        (function () {
+            console.log('// every() Example-2');
+            var fn = (a) => a < 50;
+            var a = [1, 2, 5, 15, 25, 35, 45, 50];
+            console.log(a.every(fn)) // false
+        })();
+
+
+        // every() Example-3
+        (function () {
+            console.log('// every() Example-3');
+            var fn = (a) => a <= 50;
+            var a = [1, 2, 5, '15', 25, 35, 45, '50'];
+            console.log(a.every(fn)) // true
+        })();
+
+
+        // every() Example-4
+        (function () {
+            console.log('// every() Example-4');
+            var fn = (a) => a < 50;
+            var a = [1, 2, 5, 'hello', 25, 35, 'world'];
+            console.log(a.every(fn)) // false
+        })();
+
+
+        // every() Example-5
+        (function () {
+            console.log('// every() Example-5');
+            var fn = (a) => a < 50;
+            var a = [1, 2, 5, true, 25, 35, 45, false];
+            console.log(a.every(fn)) // true
+        })();
+
+
+        // every() Example-6
+        (function () {
+            console.log('// every() Example-6');
+            var fn = (a) => a > 50;
+            var a = [55, 60, 75, 80, 95, 100];
+            console.log(a.every(fn)) // true
+        })();
+
+
+        // every() Example-7
+        (function () {
+            console.log('// every() Example-7');
+            var fn = (a) => a > 50;
+            var a = [55, 60, 75, 50, 80, 95, 100];
+            console.log(a.every(fn)) // false
+        })();
+
+
+        // Method-3 filter() Example-1
+        (function () {
+            console.log('// Method-3 filter() Example-1');
+            var fn = (a) => a >= 30;
+            var a = [3, 5, 9, 12, 16, 20, 30, 34, 38, 47, 50];
+            var newArray = a.filter(fn)
+            console.log(newArray) // [30, 34, 38, 47, 50]
+        })();
+
+
+        // filter() Example-2
+        (function () {
+            console.log('// filter() Example-2');
+            var fn = (a) => a >= 30;
+            var a = [3, 5, 9, 12, 16, 20, 30, 34, 34, 38, 47, 47, 50];
+            var newArray = a.filter(fn)
+            console.log(newArray) // [30, 34, 34, 38, 47, 47, 50]
+        })();
+
+        // filter() Example-3
+        (function () {
+            console.log('// filter() Example-3');
+            var fn = (a) => a >= 30;
+            var a = [3, 5, 9, 12, 16, 20, 30, "34", 38, 47, "50"];
+            var newArray = a.filter(fn)
+            console.log(newArray) // [30, "34", 38, 47, "50"]
+        })();
+
+
+        // filter() Example-4
+        (function () {
+            console.log('// filter() Example-4');
+            var fn = (a) => a > 30;
+            var a = [3, 5, 9, 12, 16, 20, 30, true, 38, 47, "hello"];
+            var newArray = a.filter(fn)
+            console.log(newArray) // [38, 47]
+        })();
+
+        // Method-4 forEach() Example-1
+        (function () {
+            console.log('// Method-4 forEach() Example-1');
+            var a = [3, 5, 9, 12, 16, 20, 30, 34, 38, 47, 50];
+            a.forEach(function (val, index, array) {
+                console.log('value ' + val, 'index ' + index, 'array ' + array); // value 3 index 0 array 3,5,9,12,16,20,30,34,38,47,50
+            })
+        })();
+
+
+        // Method-5 indexOf() Example-1
+        (function () {
+            console.log('// Method-5 indexOf() Example-1');
+            var a = [3, 5, 9, 12, 16, 20, 30, 34, 38, 47, 50];
+            console.log('index ' + a.indexOf(34)); // index 7
+        })();
+
+
+        // indexOf() Example-2
+        (function () {
+            console.log('// indexOf() Example-2');
+            var a = [3, 5, 9, 12, 16, 20, 30, "34", 38, 47, 50];
+            console.log(a.indexOf(34) + ' Not Found'); // -1 Not Found
+        })();
+
+
+        // indexOf() Example-3
+        (function () {
+            console.log('// indexOf() Example-3');
+            var a = [3, 5, 9, 12, 16, 20, 30, 34, 38, 47, 50];
+            console.log(a.indexOf(25) + ' Not Found'); // -1 Not Found
+        })();
+
+
+        // Method-6 lastIndexOf() Example-1
+        (function () {
+            console.log('// Method-6 lastIndexOf() Example-1');
+            var anyString = 'Brave new world';
+            console.log('The index of the first w from the beginning is ' + anyString.indexOf('w')); // logs 8
+            console.log('The index of the first w from the end is ' + anyString.lastIndexOf('w')); // logs 10
+            console.log('The index of "new" from the beginning is ' + anyString.indexOf('new')); // logs 6
+            console.log('The index of "new" from the end is ' + anyString.lastIndexOf('new')); // logs 6
+        })();
+
+
+        // Method-7 join() Example-1
+        (function () {
+            console.log('// Method-7 join() Example-1');
+            var names = ['Jacqueline', 'Morgan', 'Elizabeth', 'Katherine'];
+            console.log(names) // "Jacqueline", "Morgan", "Elizabeth", "Katherine"]
+            console.log(names.join()) // Jacqueline,Morgan,Elizabeth,Katherine
+            console.log(names.join('-')) // Jacqueline-Morgan-Elizabeth-Katherine
+            console.log(names.join(' ')) // Jacqueline Morgan Elizabeth Katherine
+            console.log(names.join('')) // JacquelineMorganElizabethKatherine
+        })();
+
+
+        // Method-8 map() Example-1
+        (function () {
+            console.log('// Method-8 map() Example-1');
+            var arr = [1, 2, 3, 4, 5];
+            console.log(arr.map(a => a * 2)); // [2, 4, 6, 8, 10]
+        })();
+
+
+        // map() Example-2
+        (function () {
+            console.log('// map() Example-2');
+            var arr = [1, 2, 3, 4, 5];
+            console.log(arr.map(a => Math.sqrt(a))); // [1, 1.4142135623730951, 1.7320508075688772, 2, 2.23606797749979]
+        })();
+
+
+        // map() Example-3
+        (function () {
+            console.log('// map() Example-3');
+            var arr = [1, 2, 3, 4, 5];
+            arr.map(function (a) {
+                console.log(Math.sqrt(a)); // same result like Example-2 but without array
+            })
+        })();
+
+
+        // Method-9 pop() Example-1
+        (function () {
+            console.log('// Method-9 pop() Example-1');
+            var a = [1, 2, 3, 4, 5, 6];
+
+            var b = a.pop();
+            console.log(a); // [1, 2, 3, 4, 5]
+            console.log(b); // 6
+
+            a.pop();
+            console.log(a); // [1, 2, 3, 4]
+        })();
+
+
+        // Method-10 push() Example-1
+        (function () {
+            console.log('// Method-10 push() Example-1');
+            var animals = ['pigs', 'goats', 'sheep'];
+
+            console.log(animals.push('cows')); // 4
+            console.log(animals); // ['pigs', 'goats', 'sheep', 'cows']
+
+            animals.push('chickens');
+            console.log(animals); // ['pigs', 'goats', 'sheep', 'cows', 'chickens']
+        })();
+
+
+        // Method-11 reduce() Example-1
+        (function () {
+            console.log('// Method-11 reduce() Example-1');
+            var a = [1, 2, 3, 4];
+            var fn = (accumulator, currentValue) => accumulator + currentValue;
+            console.log(a.reduce(fn)); // 10
+            console.log(a.reduce(fn, 5)); // 15
+        })();
+
+
+        // Method-12 reduceRight() Example-1 (from right-to-left)
+        (function () {
+            console.log('// Method-12 reduceRight() Example-1 (from right-to-left)');
+            var a = [[0, 1], [2, 3], [4, 5]].reduceRight(
+                (accumulator, currentValue) => accumulator.concat(currentValue)
+            );
+            console.log(a); // [4, 5, 2, 3, 0, 1]
+        })();
+
+
+        // Method-13 reverse() Example-1 (from right-to-left)
+        (function () {
+            console.log('// Method-13 reverse() Example-1 (from right-to-left)');
+            var a = ['one', 'two', 'three'];
+            console.log('array1: ', a); // array1: ['one', 'two', 'three']
+
+            var reversed = a.reverse();
+            console.log('reversed: ', reversed); // reversed: ['three', 'two', 'one']
+
+            console.log('array1: ', a); // array1: ['three', 'two', 'one']
+        })();
+
+
+        // Method-14 shift() Example-1
+        (function () {
+            console.log('// Method-14 shift() Example-1');
+            var a = [1, 2, 3];
+            var firstElement = a.shift();
+
+            console.log(a); // [2, 3]
+
+            console.log(firstElement); // 1
+        })();
+
+
+        // Method-15 slice() Example-1
+        (function () {
+            console.log('// Method-15 slice() Example-1');
+            var animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+            console.log(animals.slice(2)); // ["camel", "duck", "elephant"]
+
+            console.log(animals.slice(2, 4)); // ["camel", "duck"]
+
+            console.log(animals.slice(1, 5)); // ["bison", "camel", "duck", "elephant"]
+
+            console.log(animals) // ['ant', 'bison', 'camel', 'duck', 'elephant']
+        })();
+
+
+        // Method-16 some() Example-1
+        (function () {
+            console.log('// Method-16 some() Example-1');
+            var fn = (a) => a % 2 === 0;
+            var fn1 = (a) => a % 6 === 0;
+
+            var a = [1, 2, 3, 4, 5];
+            console.log(a.some(fn)) // true
+            console.log(a.some(fn1)) // false
+        })();
+
+
+        // some() Example-2
+        (function () {
+            console.log('// some() Example-2');
+            var fn = (a) => a >= 10;
+
+            var a = [1, 2, 3, 4, 5];
+            console.log(a.some(fn)) // false
+
+            var b = [11, 2, 3, 4, 5];
+            console.log(b.some(fn)) // true
+        })();
+
+
+        // Method-17 toSource() Example-1
+        (function () {
+            console.log('// Method-17 toSource() Example-1');
+            console.log('//  console.log(newBook.toSource()); // toSource() method given error in a Google Chrome');
+            function book(title, publisher, price) {
+                this.title = title;
+                this.publisher = publisher;
+                this.price = price;
+            }
+            var newBook = new book("Perl", "Leo Inc", 200);
+            //  console.log(newBook.toSource()); // toSource() method given error in a Google Chrome
+        })();
+
+
+        // Method-18 sort() Example-1
+        (function () {
+            console.log('// Method-18 sort() Example-1');
+            var months = ['March', 'Jan', 'Feb', 'Dec'];
+            months.sort();
+            console.log(months) // ["Dec", "Feb", "Jan", "March"]
+        })();
+
+
+        // sort() Example-2
+        (function () {
+            console.log('// sort() Example-2');
+            var a = [1, 30, 4, 21, 100000];
+            a.sort();
+            console.log(a) // [1, 100000, 21, 30, 4]
+        })();
+
+
+        // Method-19 splice() Example-1 adding
+        (function () {
+            console.log('// Method-19 splice() Example-1 adding');
+            var months = ['Jan', 'March', 'April', 'June'];
+            months.splice(1, 0, 'Feb');
+            console.log(months);  // ['Jan', 'Feb', 'March', 'April', 'June']
+        })();
+
+
+        // splice() Example-2 removing
+        (function () {
+            console.log('// splice() Example-2 removing');
+            var months = ['Jan', 'March', 'April', 'June'];
+            months.splice(2, 1);
+            console.log(months); // ['Jan', 'Feb', 'March', 'June']
+        })();
+
+
+        // splice() Example-3 replace
+        (function () {
+            console.log('// splice() Example-3 replace');
+            var months = ['Jan', 'March', 'April', 'June'];
+            months.splice(1, 4, 'Feb', 'March', 'April', 'May', 'june');
+            console.log(months); // ["Jan", "Feb", "March", "April", "May", "june"]
+        })();
+
+
+        // Method-20 toString() Example-1
+        (function () {
+            console.log('// Method-20 toString() Example-1');
+            var fruits = ["orange", "mango", "banana", "sugar"];
+            var str = fruits.toString();
+            console.log(str) // [orange, mango, banana, sugar];
+        })();
+
+
+        // Method-21 unshift() Example-1
+        (function () {
+            console.log('// Method-21 unshift() Example-1');
+            var a = [1, 2, 3];
+
+            console.log('new-length ' + a.unshift(4, 5)); // new-length 5
+            console.log(a); // [4, 5, 1, 2, 3]
+        })();
+    </script>
+
+</body>
+
+</html>
